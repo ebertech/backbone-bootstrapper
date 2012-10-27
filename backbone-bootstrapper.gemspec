@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Backbone::Bootstrapper::VERSION
   gem.authors       = ["Andrew Eberbach"]
   gem.email         = ["andrew@ebertech.ca"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A helper to bootstrap backbone models and collections}
+  gem.summary       = %q{A helper to bootstrap backbone models and collections}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
