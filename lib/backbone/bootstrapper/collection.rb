@@ -11,9 +11,7 @@ module Backbone
       end
             
       def render
-        @object.map do |item|
-          Rabl::Renderer.json(object, template, :view_path => 'app/views', :object => object)        
-        end.join("\n")
+        Rabl::Renderer.json(@object, @template, :view_path => 'app/views', :object => @object)        
       end  
     end
   end

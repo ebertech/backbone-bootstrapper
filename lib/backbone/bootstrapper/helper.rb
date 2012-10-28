@@ -30,8 +30,13 @@ module Backbone
 
         private
         def with_javascript_tag(&block)
-          (@template || view_context).javascript_tag(&block).tap do |r|
-            return r.html_safe if r.respond_to?(:html_safe)
+          (@template || view_context).javascript_tag do 
+            result = block.call
+            if result.respond_to?(:html_safe)
+              result.html_safe 
+            else
+              result
+            end
           end
         end
       end
